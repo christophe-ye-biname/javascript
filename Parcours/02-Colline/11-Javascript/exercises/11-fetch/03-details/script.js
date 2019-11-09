@@ -19,7 +19,7 @@
             content.json().then(function(data)  {
                 console.log(data);
                 let answer = document.querySelector("input").value;
-                
+                console.log(answer);
 
                 let templ = document.querySelector("template");
                 let targ = document.getElementById("target");

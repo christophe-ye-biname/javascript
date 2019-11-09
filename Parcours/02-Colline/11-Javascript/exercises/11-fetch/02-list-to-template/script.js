@@ -15,8 +15,7 @@
     fetch("http://localhost:3000/heroes")
     .then(function (content)  {
         content.json().then(function(data)  {
-            console.log(data[2]["name"]);
-            let heroId = ``;
+            console.log(data);
             let templ = document.querySelector("template");
             let targ = document.getElementById("target");
             let clone = document.importNode(templ.content, true);
@@ -26,7 +25,9 @@
                 targ = document.getElementById("target");
                 let clone = document.importNode(templ.content, true);
                 let name = clone.querySelector(".name").innerHTML = `${data[i]["name"]}`;
+                let alter = clone.querySelector(".alter-ego").innerHTML = `${data[i]["alterEgo"]}`;
                 targ.appendChild(clone);
+                
             }
         })
     })

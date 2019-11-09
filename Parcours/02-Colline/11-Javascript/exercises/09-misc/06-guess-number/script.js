@@ -11,4 +11,23 @@
 
 (() => {
     // your code here
+    let rand = Math.floor(Math.random() * 100) + 1;
+    let ask;
+
+   
+
+    do {
+        ask = parseInt(prompt("entrez un nombre"));
+        if (ask > rand)
+    {
+        alert("plus bas");
+    }
+    else if (ask < rand)
+    {
+        alert("plus haut");
+    }
+    else{
+        alert("bravo");
+    }
+    } while(ask != rand);
 })();

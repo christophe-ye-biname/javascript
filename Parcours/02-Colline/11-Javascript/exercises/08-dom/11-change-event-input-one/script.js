@@ -17,7 +17,7 @@ maxi.setAttribute("maxLength", 10);
     document.getElementById("pass-one").addEventListener("input", () => {
         // your code here
         count.innerHTML = document.getElementById("pass-one").value.length + "/" + maxi.maxLength;
-        
+        console.log(count.innerHTML);
 
     });
 })();
