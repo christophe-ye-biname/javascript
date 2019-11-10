@@ -17,25 +17,21 @@
         "../../_shared/img/lemon.svg",
         "../../_shared/img/map.svg",
     ];
-    
+
     // your code here
-            let check = document.querySelector("img")[0];    
-            let current = check.getAttribute("src") = gallery[0];
-            console.log(check);
-            let i = 0;
-            (() => {
-                document.getElementById("next").addEventListener("click", () => {
-                // your code here
-                if (i === gallery.length - 1)
-                {
-                    i = 0;
-                }
-                else
-                {
-                    i++;
-                }
-                check.setAttribute("src", gallery[i]);
-                
-            })();
-        
+    let pic = document.getElementsByTagName("img")[0];
+    let check = pic.getAttribute("src");
+    let i = 0;
+    document.getElementById("next").addEventListener("click", () => {
+        if (i === gallery.length - 1)
+        {
+            i = 0;
+        }
+        else
+        {
+            i++;
+        }
+        pic.setAttribute("src" , gallery[i]);
+    })
 })();
+
