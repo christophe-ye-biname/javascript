@@ -22,13 +22,11 @@
     (() => {
         document.getElementById("run").addEventListener("click", () => {
             // your code here
-            lib.getPersons(content).then((content) => {
+            lib.getPersons().then((content) => {
                 
-                console.log("content");
+                console.log(content) || console.error(Error)
             })
-            .catch((err) => {
-                console.log("non" + err);
-            })
+            
         
         });
     })();

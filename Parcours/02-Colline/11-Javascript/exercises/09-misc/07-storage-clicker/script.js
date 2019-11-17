@@ -11,14 +11,15 @@
 
 (() => {
     // your code here
-    let count = 0;
-    
-    document.getElementById("increment").addEventListener("click", () => {
-        count++;
-        let nb = document.getElementById("target");
-        console.log("1");
-        nb.innerHTML = count;
-        console.log("2");
-        let store = localStorage.setItem();
-    });
+    const save = () => {
+        let store = localStorage.getItem("cl");
+        if (store === null)
+        {
+            store = 0;
+        }
+        store++;
+        localStorage.setItem("cl", store);
+        document.getElementById("target").innerHTML = store;
+    }
+    document.getElementById("increment").addEventListener("click", save);
 })();

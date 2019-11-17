@@ -11,4 +11,7 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        lib.getPersons().then(async (content) => console.log(await content) || console.error(err));
+    });
 })();

@@ -10,36 +10,22 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-    /*async function ft()
-    {
-        const tab = await lib.getPosts();
-        console.log(tab);
-
-    }
-    ft();
-
-
-    lib.getPosts().then((content) => {
-        console.log(content)
-        for (let i = 0;i < content.length; i++)
-        {
-            let comId = content[i].id;
-            lib.getComments(comId).then((comment) => {
-                content[i].comments = comment;
+    document.getElementById("run").addEventListener("click", () => {
+        () => {
+            lib.getPost().then(async(contents) => {
+                console.log(await contents);
+                let comIds = [];
+                for (let content of contents)
+                {
+                    comId.push(content.id);
+                    for (let comId of comIds)
+                    {
+                        lib.getComments().then((comments => {
+                            content.comments = comments;
+                        }));
+                    }
+                }
             })
         }
-    });*/
-    async function ft()
-    {
-        const tab = await lib.getPosts();
-        for (let i = 0; i < tab.length; i++)
-        {
-            let comId = content[i].id;
-            lib.getComments(comId).then((comment) => {
-                content[i].comments = comment;
-        }
-        console.log(tab);
-    }
-    }
+    })
 })();
